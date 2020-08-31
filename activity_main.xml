@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="SongBook"
+        android:iconifiedByDefault="false"
+        android:id="@+id/searchView"
+        />
+
+    <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/slider"
+        android:layout_width="match_parent"
+        app:auto_cycle="true"
+        app:delay="0"
+        app:period="1000"
+        app:corner_radius="20"
+        app:error_image="@drawable/grey"
+        app:placeholder="@drawable/grey"
+        android:layout_height="200dp"
+        />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/firstitem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Indian" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/seconditem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pakistani" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/thirditem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="English" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>
